@@ -21,7 +21,7 @@
             border-radius: 8px;
             padding: 20px;
             margin: 10px;
-            width: calc(33.333% - 20px);
+            width: calc(100% - 20px);
             box-sizing: border-box;
             transition: transform 0.3s ease-in-out;
             position: relative;
@@ -33,15 +33,18 @@
 
         .banner-image {
             width: 100%;
-            height: 100px;
+            height: 150px;
             background-size: cover;
             background-position: center;
             border-radius: 8px 8px 0 0;
         }
 
+        h1, h2, p {
+            text-align: center;
+        }
+
         h1 {
             color: #333;
-            text-align: center;
             margin-bottom: 20px;
             width: 100%;
         }
@@ -58,6 +61,18 @@
 
         .main-project {
             background-color: #ffcc00;
+        }
+
+        @media screen and (min-width: 600px) {
+            .project-box {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media screen and (min-width: 900px) {
+            .project-box {
+                width: calc(33.333% - 20px);
+            }
         }
     </style>
 </head>
@@ -83,7 +98,9 @@
         <h2>Coming soon ...</h2>
         <p>Unknown</p>
     </div>
-        <h1>Other simple projects</h1>
+    
+    <h1>Other simple projects</h1>
+
     <!-- Other Projects -->
     <div class="project-box" onclick="window.location.href='https://github.com/AbdullahBamufleh/arabic_lcd'">
         <div class="banner-image" style="background-image: url('LCD.png');"></div>
