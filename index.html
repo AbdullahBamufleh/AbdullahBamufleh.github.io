@@ -25,6 +25,8 @@
             box-sizing: border-box;
             transition: transform 0.3s ease-in-out;
             position: relative;
+            text-decoration: none;
+            color: inherit;
         }
 
         .project-box:hover {
@@ -49,7 +51,6 @@
         h2 {
             color: #333;
             margin-bottom: 10px;
-            cursor: pointer;
         }
 
         p {
@@ -74,42 +75,61 @@
     <h2 id="info">(press for more information)</h2>
 
     <!-- Main Projects -->
-    <div class="project-box main-project" onclick="window.location.href='https://x.com/AbdullahBamuf/status/1784894796345028838'">
+    <a href="https://x.com/AbdullahBamuf/status/1784894796345028838" target="_blank" class="project-box main-project">
         <div class="banner-image" style="background-image: url('Kaabol.jpg');"></div>
         <h2>Kaabol robot project</h2>
         <p>Kaabol is our friend robot with only 4 servos</p>
-    </div>
+    </a>
 
-    <div class="project-box main-project" onclick="window.location.href='https://x.com/AbdullahBamuf/status/1763666985068487015?s=20'">
+    <a href="https://x.com/AbdullahBamuf/status/1763666985068487015?s=20" target="_blank" class="project-box main-project">
         <div class="banner-image" style="background-image: url('Ri.jpg');"></div>
         <h2>Ri Automated Irrigation System</h2>
-        <p>Ri its a project got the second place in IOT hackathon that control waterflow throuh several condisions</p>
-    </div>
+        <p>Ri is a project that got second place in IoT hackathon that controls waterflow through several conditions</p>
+    </a>
 
-    <div class="project-box main-project" onclick="window.location.href='https://x.com/abdullahbamuf/status/1796820239067304193?s=46&t=JnFVE1-7BZIgsNzW_frMZg'">
+    <a href="https://x.com/AbdullahBamuf/status/1785353310846738784" target="_blank" class="project-box main-project">
         <div class="banner-image" style="background-image: url('RcCar.jpg');"></div>
         <h2>RC Car</h2>
-        <p>A remoted car with 4 motors and four wheels controled by Bluetooth connection</p>
-    </div>
-        <h1>Other simple projects</h1>
+        <p>A remote-controlled car with 4 motors and four wheels controlled via Bluetooth</p>
+    </a>
+
+    <a href="https://x.com/AbdullahBamuf/status/1825953745261515133" target="_blank" class="project-box main-project">
+        <div class="banner-image" style="background-image: url('line\ following\ robot.jpeg');"></div>
+        <h2>Line following robot</h2>
+        <p>This robot have a one jop, is to follow the black line using two IR sensors and motors</p>
+    </a>
+
+    <a href="https://x.com/AbdullahBamuf/status/1820064325244948956" target="_blank" class="project-box main-project">
+        <div class="banner-image" style="background-image: url('temperature\ and\ humidity\ monitor.png');"></div>
+        <h2>Temprature And Humadity Monitor</h2>
+        <p>This project allows you to monitor the temperature and humidity of your room, kitchen, or even your lab using the Arduino Cloud platform and ESP32.</p>
+    </a>
+
+    <a href="#" target="_blank" class="project-box main-project">
+        <div class="banner-image" style="background-image: url('newProject3.jpg');"></div>
+        <h2>Comming soon ... </h2>
+        <p></p>
+    </a>
+
+    <h1>Other simple projects</h1>
     <!-- Other Projects -->
-    <div class="project-box" onclick="window.location.href='https://github.com/AbdullahBamufleh/arabic_lcd'">
+    <a href="https://github.com/AbdullahBamufleh/arabic_lcd" target="_blank" class="project-box">
         <div class="banner-image" style="background-image: url('LCD.png');"></div>
         <h2>LCD in Arabic tutorial</h2>
         <p>In this repo, I explained how to write Arabic words using LCD board</p>
-    </div>
+    </a>
 
-    <div class="project-box" onclick="window.location.href='https://github.com/AbdullahBamufleh/sevenSegments'">
+    <a href="https://github.com/AbdullahBamufleh/sevenSegments" target="_blank" class="project-box">
         <div class="banner-image" style="background-image: url('sevenSegment.png');"></div>
         <h2>Seven Segment Library</h2>
         <p>I made this library to help people use seven segment display with simple commands</p>
-    </div>
+    </a>
 
-    <div class="project-box" onclick="window.location.href='https://github.com/AbdullahBamufleh/ObstaclesDetector'">
+    <a href="https://github.com/AbdullahBamufleh/ObstaclesDetector" target="_blank" class="project-box">
         <div class="banner-image" style="background-image: url('Obstacles.png');"></div>
         <h2>Obstacles detector</h2>
         <p>Using only Ultrasonic and buzzer you could make your own obstacles detector</p>
-    </div>
+    </a>
 
 </body>
 </html>
