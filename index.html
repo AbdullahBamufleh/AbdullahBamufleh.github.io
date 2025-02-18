@@ -1,135 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Projects</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdullah Bamufleh - Portfolio</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f4f6f9;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
 
-        .project-box {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 10px;
-            width: calc(33.333% - 20px);
-            box-sizing: border-box;
-            transition: transform 0.3s ease-in-out;
-            position: relative;
-            text-decoration: none;
-            color: inherit;
+      /* Gradient Animation */
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
         }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
 
-        .project-box:hover {
-            transform: scale(1.05);
-        }
+      .gradient-bg {
+        background: linear-gradient(-45deg, #1e3c72, #2a5298, #6dd5ed, #2193b0);
+        background-size: 300% 300%;
+        animation: gradient 6s ease infinite;
+        color: white;
+      }
 
-        .banner-image {
-            width: 100%;
-            height: 100px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 8px 8px 0 0;
-        }
+/* شريط العنوان المتدرج */
+.section-header {
+  position: relative;
+  background: linear-gradient(-45deg, #2193b0, #6dd5ed, #2a5298, #1e3c72); /* Flipped colors */
+  background-size: 300% 300%;
+  animation: gradient 6s ease infinite;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
 
-        h1 {
-            color: #333;
-            text-align: center;
-            margin-bottom: 20px;
-            width: 100%;
-        }
+/* تعديل الـ section لإضافة مساحة للشريط */
+section {
+  position: relative;
+  padding: 60px 20px 40px; /* ترك مساحة أعلى للشريط */
+  margin: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
 
-        h2 {
-            color: #333;
-            margin-bottom: 10px;
-        }
 
-        p {
-            color: #666;
-        }
+      header {
+        text-align: center;
+        padding: 60px 20px;
+      }
 
-        .main-project {
-            background-color: #ffcc00;
-        }
+      header h1 {
+        font-size: 3.5rem;
+        margin: 0;
+      }
 
-        #info {
-            color: #333;
-            text-align: center;
-            margin-bottom: 10px;
-            width: 100%;
-        }
+      nav {
+        padding: 15px;
+        text-align: center;
+      }
+
+      nav a {
+        color: white;
+        margin: 0 20px;
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+
+      section {
+        padding: 40px 20px;
+        margin: 40px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        color: #2c3e50;
+      }
+
+      /* Grid Layout */
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .box {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+      }
+
+      .box:hover {
+        transform: scale(1.05); /* Slightly increase the size */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Optional: Increase shadow for a lifting effect */
+      }
+
+      .box a {
+        text-decoration: none; /* Remove underline from links */
+        color: inherit; /* Inherit text color from parent */
+        display: block; /* Make the link fill the entire box */
+      }
+
+      .box img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .box h3 {
+        margin: 15px 0 10px;
+        color: #2c3e50;
+      }
+
+      .box p {
+        font-size: 0.9rem;
+        color: #555;
+        margin: 0;
+      }
+
+      /* Logo Section */
+      .logo-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px; /* Space between logos */
+        margin-top: 20px;
+      }
+
+      .logo-container a {
+        display: inline-block;
+        transition: transform 0.3s ease;
+      }
+
+      .logo-container a:hover {
+        transform: scale(1.1); /* Slightly enlarge logos on hover */
+      }
+
+      .logo-container img {
+        width: 50px; /* Adjust logo size */
+        height: 50px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <header class="gradient-bg">
+      <h1>Abdullah Bamufleh</h1>
+      <p>  IoT | Embedded System  | Robotics </p>
+    </header>
 
-    <h1>My Personal Projects</h1>
-    <h2 id="info">(press for more information)</h2>
+    <nav class="gradient-bg">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#workshops">Workshops</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-    <!-- Main Projects -->
-    <a href="https://x.com/AbdullahBamuf/status/1784894796345028838" target="_blank" class="project-box main-project">
-        <div class="banner-image" style="background-image: url('Kaabol.jpg');"></div>
-        <h2>Kaabol robot project</h2>
-        <p>Kaabol is our friend robot with only 4 servos</p>
-    </a>
+    <section id="about">
+      <div class="section-header">About</div>
+      <p>A motivated and ambitious student with an interest in technology, particularly
+        Robotics and IoT. amateur in Electronics, have hands-on experience with Arduino,ESP projects. Actively seeking opportunities for learning and skill
+        enhancement.</p>
+    </section>
 
-    <a href="https://x.com/AbdullahBamuf/status/1763666985068487015?s=20" target="_blank" class="project-box main-project">
-        <div class="banner-image" style="background-image: url('Ri.jpg');"></div>
-        <h2>Ri Automated Irrigation System</h2>
-        <p>Ri is a project that got second place in IoT hackathon that controls waterflow through several conditions</p>
-    </a>
+    <section id="projects">
+      <div class="section-header">Projects</div>
+      <div class="grid-container">
+        <div class="box">
+          <a href="https://www.youtube.com/watch?v=sRw0Oxa3ueE" target="_blank">
+            <img src="HandHyigenTracker.jpg" />
+            <h3>Hand Hygiene Tracker</h3>
+            <p>The Hand Hyigen Tracker, is an IoT project that aims to limit the spread of infection among patients and health practitioners by monitoring the required hand hygiene processes between and after each patient.</p>
+          </a>
+        </div>
+        <div class="box">
+            <img src="Moaan.jpg" />
+            <h3>Moaan</h3>
+            <p>Moaan is an innovative IoT-based cargo ship tracking and monitoring system designed to enhance maritime logistics. Built on the Cumulocity IoT platform, Moaan provides real-time data insights to address key challenges faced by cargo ships.</p>
+        </div>
+        <div class="box">
+          <a href="https://x.com/AbdullahBamuf/status/1820064325244948956" target="_blank">
+            <img src="temperature and humidity monitor.png" />
+            <h3> Temperature and Humidity system</h3>
+            <p>This project allows you to monitor the temperature and humidity of your room, kitchen, or even your lab using the Arduino Cloud platform and ESP32.</p>
+          </a>
+        </div>
+        <div class="box">
+          <a href="https://x.com/AbdullahBamuf/status/1785353310846738784" target="_blank">
+            <img src="RcCar.jpg" />
+            <h3>RC car</h3>
+            <p>A remote-controlled car with 4 motors and four wheels controlled via Bluetooth.</p>
+          </a>
+        </div>
+        <div class="box">
+          <a href="https://x.com/AbdullahBamuf/status/1825953745261515133" target="_blank">
+            <img src="line following robot.jpeg" />
+            <h3>Line Following Robot</h3>
+            <p>First appear at Newcomers Forum This robot have a one jop, is to follow the black line using two IR sensors and motors.</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
-    <a href="https://x.com/AbdullahBamuf/status/1785353310846738784" target="_blank" class="project-box main-project">
-        <div class="banner-image" style="background-image: url('RcCar.jpg');"></div>
-        <h2>RC Car</h2>
-        <p>A remote-controlled car with 4 motors and four wheels controlled via Bluetooth</p>
-    </a>
+    <section id="skills">
+      <div class="section-header">Skills</div>
+      <ul>
+        <li>🔹 Leadership & Teamwork</li>
+        <li>🔹 Effective Communication</li>
+        <li>🔹 Time Management</li>
+        <li>🔹 C++</li>
+        <li>🔹 Creativity & Innovation</li>
+        <li>🔹 Continuous Learning & Adaptability
+        </li>
+      </ul>
+    </section>
 
-    <a href="https://x.com/AbdullahBamuf/status/1825953745261515133" target="_blank" class="project-box main-project">
-        <div class="banner-image" style="background-image: url('line\ following\ robot.jpeg');"></div>
-        <h2>Line following robot</h2>
-        <p>This robot have a one jop, is to follow the black line using two IR sensors and motors</p>
-    </a>
+    <section id="experience">
+      <div class="section-header">Experience</div>
+      <div class="grid-container">
+        <div class="box">
+          <a href="" target="_blank">
+            <img src="SummerTraining.jpg" />
+            <h3>Network Operation</h3>
+            <p>Two months of training in Network Operation department at Holy Makkah Municipality learning about netwoks design and incident response.</p>
+          </a>
+        </div>
+        <div class="box">
+          <a href="https://www.linkedin.com/posts/abdullah-bamufleh-a067b9292_a-few-weeks-ago-i-completed-my-seasonal-activity-7223419417685094400-v_5S?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEb0MWYBVmoRKHiQcPNYHP0VGj4JlZPGtPM" target="_blank">
+            <img src="DataEntery.jpg" />
+            <h3>Data Entry</h3>
+            <p>A season job work as Data entry in passport department at Ithraa Alkhair.</p>
+          </a>
+        </div>
+        <div class="box">
+          <a href="https://x.com/AbdullahBamuf/status/1746266592428560709" target="_blank">
+            <img src="RoboticBootcamp.jpg" />
+            <h3>Robotics Bootcamp</h3>
+            <p>Three intensive days learning about robotics and working on a 4 servo walking robot.</p>
+          </a>
+        </div>
+        <div class="box">
+            <img src="Leadership.jpg" />
+            <h3>Computer Engineering Team Leadership</h3>
+            <p>Leadring the computer engineering team at computing club in university
+              working on workshops, technical interviews and Scientific posts.</p>
+        </div>
+        <div class="box">
+          <a href="https://x.com/AbdullahBamuf/status/1861413345275891853" target="_blank">
+            <img src="Drone.jpg" />
+            <h3>Building Drone</h3>
+            <p>In cooperation with Tuwaiq Academy and Jeddah University we build our Drone in Jeddah University hackathon for drones .</p>
+          </a>
+        </div>
+        <!-- Repeat for other boxes -->
+      </div>
+    </section>
 
-    <a href="https://x.com/AbdullahBamuf/status/1820064325244948956" target="_blank" class="project-box main-project">
-        <div class="banner-image" style="background-image: url('temperature\ and\ humidity\ monitor.png');"></div>
-        <h2>Temprature And Humadity Monitor</h2>
-        <p>This project allows you to monitor the temperature and humidity of your room, kitchen, or even your lab using the Arduino Cloud platform and ESP32.</p>
-    </a>
+    <section id="workshops">
+      <div class="section-header">Workshops</div>
+      <div class="grid-container">
+        <div class="box">
+          <a href="https://www.linkedin.com/posts/abdullah-bamufleh-a067b9292_excited-to-share-that-we-finally-our-workshop-activity-7247938633360371713-KD-m?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEb0MWYBVmoRKHiQcPNYHP0VGj4JlZPGtPM" target="_blank">
+            <img src="Circuit.JPG" />
+            <h3>Introduction to Circuits</h3>
+            <p>Presenting an introduction to electrical circuits with analysis and taking measurements as a computer engineering team workshop.</p>
+          </a>
+        </div>
+        <div class="box">
+          <a href="https://www.linkedin.com/posts/uqucc_%D9%81%D9%8A-%D8%A5%D8%B7%D8%A7%D8%B1-%D8%AA%D8%B9%D8%B2%D9%8A%D8%B2-%D9%85%D9%87%D8%A7%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A-%D9%86%D8%B8%D9%85-activity-7257073718877700096-Bxuw?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEb0MWYBVmoRKHiQcPNYHP0VGj4JlZPGtPM" target="_blank">
+            <img src="Tinkercad.jpg" />
+            <h3>Tinkercad Workshop</h3>
+            <p>Hands-on workshop on using Tinkercad for 3D design and simulations and applying Digital Logic Design consepts.</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
-    <a href="#" target="_blank" class="project-box main-project">
-        <div class="banner-image" style="background-image: url('newProject3.jpg');"></div>
-        <h2>Comming soon ... </h2>
-        <p></p>
-    </a>
+    <section id="certificates">
+      <div class="section-header">Certificates</div>
+      <div class="grid-container">
+        <div class="box">
+          <a href="https://www.linkedin.com/posts/abdullah-bamufleh-a067b9292_it-has-been-a-month-since-we-have-participated-activity-7207094083796807680-ZfBS?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEb0MWYBVmoRKHiQcPNYHP0VGj4JlZPGtPM" target="_blank">
+            <iframe src="شهادة مسابقة برمجة الاردوينو.pdf" width="250" height="150"></iframe>
+            <h3>Arduino Hackathon</h3>
+            <p>Attendence certificate of Arduino Hackathon manageed by Jeddah University, presenting our Hospitality Trolly Robot project.</p>
+          </a>
+        </div>
+        <div class="box">
+            <iframe src="Nita.pdf" width="250" height="150"></iframe>
+            <h3>Smartcity Bootcamp</h3>
+            <p>4 month Smart City Bootcamp orgnized by NITA learning about IoT, Digital Twin and many
+              Ended up with our project Moaan on CumulocityIoT platform.</p>
+        </div>
+        <div class="box">
+            <iframe src="Coursera HV749VE9SXE9.pdf" width="250" height="150"></iframe>
+            <h3>The Arduino Platform and C Programming</h3>
+            <p>Completed a course on Arduino and C Programming.</p>
+        </div>
+        <div class="box">
+          <a href="https://x.com/AbdullahBamuf/status/1763666985068487015" target="_blank">
+            <iframe src="IOTcampCertificate.pdf" width="250" height="150"></iframe>
+            <h3>Seceond place in IoT Hackathon</h3>
+            <p>Our smart irrigation system Ri got the second place In IOT competition by KKU Club.</p>
+          </a>
+        </div>
+        <div class="box">
+          <a href="https://nvg.gov.sa/public/certification/db9556dc-72f5-4460-a5a4-08dbc313fd66" target="_blank">
+            <iframe src="VolWrok.pdf" width="250" height="150"></iframe>
+            <h3>Voluntary Certificates</h3>
+            <p>Certificate of all voluntary hours in National Platform for Volunteer Work.</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
-    <h1>Other simple projects</h1>
-    <!-- Other Projects -->
-    <a href="https://github.com/AbdullahBamufleh/arabic_lcd" target="_blank" class="project-box">
-        <div class="banner-image" style="background-image: url('LCD.png');"></div>
-        <h2>LCD in Arabic tutorial</h2>
-        <p>In this repo, I explained how to write Arabic words using LCD board</p>
-    </a>
+    <section id="contact">
+      <div class="section-header">Contact Me</div>
+      <div class="logo-container">
+        <!-- LinkedIn Logo -->
+        <a href="https://www.linkedin.com/in/abdullah-bamufleh-a067b9292/" target="_blank">
+          <img src="linkedin-logo.png" alt="LinkedIn" />
+        </a>
+        <!-- X Logo -->
+        <a href="https://x.com/AbdullahBamuf" target="_blank">
+          <img src="X.png" alt="X" />
+        </a>
+        <!-- Email Logo -->
+        <a href="mailto:AbdullahBamufle" target="_blank">
+          <img src="email.png" alt="Email" />
+        </a>
+      </div>
+    </section>
 
-    <a href="https://github.com/AbdullahBamufleh/sevenSegments" target="_blank" class="project-box">
-        <div class="banner-image" style="background-image: url('sevenSegment.png');"></div>
-        <h2>Seven Segment Library</h2>
-        <p>I made this library to help people use seven segment display with simple commands</p>
-    </a>
-
-    <a href="https://github.com/AbdullahBamufleh/ObstaclesDetector" target="_blank" class="project-box">
-        <div class="banner-image" style="background-image: url('Obstacles.png');"></div>
-        <h2>Obstacles detector</h2>
-        <p>Using only Ultrasonic and buzzer you could make your own obstacles detector</p>
-    </a>
-
-</body>
+    <footer class="gradient-bg">
+      <p>&copy; 2025 Abdullah Bamufleh. All Rights Reserved.</p>
+    </footer>
+  </body>
 </html>
